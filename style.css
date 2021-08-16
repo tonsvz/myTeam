@@ -1,93 +1,80 @@
-/* Google Font
-font-family: 'PT Serif', serif;
-font-family: 'Poppins', serif;
+/* Google Fonts
+
+    font-family: 'Poppins', sans-serif;
+    font-family: 'PT Serif', serif;
+
  */
 
 * {
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 65%;
+}
+
+:root {
+  --bg-color: #ffffff;
+  --font-color: #323322;
+  --footer-font-color: #a9a9a9;
 }
 
 body {
-  background-color: #ffff;
-}
-
-.flex-container {
   display: flex;
-  justify-content: center;
-  /* border: 1px solid black; */
-  margin: 50px 90px 0 90px;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--bg-color);
 }
 
-header {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  max-width: 100%;
+.introduction {
+  margin-top: 80px;
 }
 
 .title {
-  width: 100%;
-}
-.title h1 {
-  font-family: "PT Serif";
-  font-size: 2.1rem;
-  margin-right: 450px;
-  width: 100%;
+  font-size: 3rem;
+  font-weight: 700;
+  font-family: "PT serif";
+  color: var(--font-color);
 }
 
-.wwa,
-.description {
-  font-family: "Poppins", sans-serif;
-}
-
-.wwa h2 {
-  font-size: 1.1rem;
-}
-
-.description p {
-  line-height: 27px;
-}
-
-.text-container {
-  margin-top: 20px;
-}
-
-.crewMembers {
-  margin: 8rem 90px 0 90px;
-  max-width: 100%;
-}
-
-.photos {
-  display: grid;
-  grid-template-columns: 33% 33% 33%;
-  row-gap: 10rem;
-  align-content: center;
-}
-.crew {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.crew p {
-  font-family: "Poppins", sans-serif;
+.about {
+  font-family: "Poppins";
   font-weight: 500;
+  font-size: 1.5rem;
+  color: var(--font-color);
+  text-transform: uppercase;
+  margin-top: 1.4rem;
 }
 
-.crew img {
-  max-width: 80%;
+.about-details {
+  color: var(--font-color);
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-top: 50px;
 }
 
-.crew:nth-child(3) {
-  max-height: 90%;
+.crew {
+  display: grid;
+  grid-template-columns: minmax(158px, 250px) minmax(158px, 250px);
+  column-gap: 25px;
+  row-gap: 15px;
+  margin: 0 20px 0 20px;
+  margin-top: 50px;
 }
-.crew:nth-child(2) {
-  transform: translateY(50px);
+.crew-card {
+  position: relative;
 }
-.crew:nth-child(4) {
-  max-height: 90%;
+.crew-photo {
+  width: 100%;
 }
-.crew:nth-child(5) {
-  transform: translateY(50px);
+
+.crew-job {
+  position: absolute;
+  right: -13px;
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+  color: #323322;
+  font-weight: 500;
 }

@@ -1,0 +1,164 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --footer-text-color: #a9a9a9;
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  width: 90.4%;
+  max-width: 925px;
+  color: var(--text-color);
+}
+
+.title {
+  margin-top: 71px;
+  margin-bottom: 38px;
+  font-family: "PT Serif", serif;
+  font-size: 3.6rem;
+  font-weight: 700;
+}
+
+.introduction {
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 38px;
+}
+
+.introduction__header {
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.introduction__about-us {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.members {
+  display: grid;
+  align-content: center;
+  grid-template-columns: minmax(156px, 264px) minmax(156px, 264px);
+  column-gap: 20px;
+  row-gap: 10px;
+}
+
+.member-card {
+  position: relative;
+}
+
+.card-photo {
+  width: calc(100% - 16px);
+  margin-bottom: 10px;
+}
+
+.member-card__job-title {
+  position: absolute;
+  right: 0;
+  font-family: "PT Serif", serif;
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+}
+
+.member-card__name {
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.member-card:nth-of-type(2n) {
+  margin-top: 48px;
+}
+
+.footer {
+  margin-top: 135px;
+  height: 40px;
+  text-align: center;
+}
+
+.author {
+  color: var(--footer-text-color);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.author > .author--username {
+  color: inherit;
+  font-weight: 700;
+}
+
+@media (min-width: 1024px) {
+  .main {
+    margin-top: 80px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: unset;
+    flex-wrap: wrap;
+  }
+
+  .title {
+    width: 50%;
+    margin: 0;
+  }
+
+  .introduction {
+    margin-left: 30px;
+    width: calc(50% - 30px);
+  }
+
+  .introduction__about-us {
+    max-width: 300px;
+    font-size: 1.8rem;
+  }
+
+  .members {
+    grid-template-columns: repeat(3, 264px);
+    column-gap: 66px;
+  }
+
+  .card-photo {
+    width: calc(100% - 22px);
+    margin-bottom: 15px;
+  }
+
+  .member-card__job-title {
+    font-size: 1.2rem;
+  }
+
+  .member-card__name {
+    font-size: 1.8rem;
+  }
+
+  .member-card:nth-of-type(2n) {
+    margin: 0;
+  }
+
+  .member-card:nth-of-type(3n-1) {
+    margin-top: 100px;
+  }
+
+  .footer {
+    margin-top: 115px;
+  }
+}
